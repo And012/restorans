@@ -3,6 +3,10 @@ import { Route } from 'react-router';
 import { Switch } from 'react-router-dom';
 
 const AppRoutes = () => {
+    // firebase.firestore().collection('restaurants').get().then(data => {
+    //     const docs = data.docs.map((doc) => doc.data());
+    //     console.log(docs);
+    // });
     return (
         <Switch>
             <Route exact path="/">
