@@ -13,7 +13,7 @@ export const actions = {
 }
 
 export const asyncActions = {
-    restaurants: restaurantsSlice.asyncActions,
+restaurants: restaurantsSlice.asyncActions,
 }
 
 export const selectors = {

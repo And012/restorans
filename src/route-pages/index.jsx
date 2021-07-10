@@ -2,24 +2,23 @@ import React from 'react';
 import { Route } from 'react-router';
 import { Switch } from 'react-router-dom';
 
-const AppRoutes = () => {
-    // firebase.firestore().collection('restaurants').get().then(data => {
-    //     const docs = data.docs.map((doc) => doc.data());
-    //     console.log(docs);
-    // });
-    return (
+import AdminPage from "./admin/adminPage";
+import MainPage from '../route-pages/main-page';
+import InfoPage from "./info-page";
+
+const AppRoutes = () =>
+    (
         <Switch>
             <Route exact path="/">
-                <h1>Main page</h1>
+                <MainPage/>
             </Route>
             <Route path="/admin">
-                <h1>Admin page</h1>
+                <AdminPage/>
             </Route>
             <Route path="/info">
-                <h1>info page</h1>
+                <InfoPage />
             </Route>
         </Switch>
     )
-}
 
 export default AppRoutes;
