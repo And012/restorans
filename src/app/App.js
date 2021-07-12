@@ -1,9 +1,15 @@
 import React from 'react';
 
-import '../configs/firebase.config';
+import {useDispatch} from "react-redux";
+
+import {asyncActions} from "../store/slices";
 import AppRoutes from "../route-pages";
+import '../configs/firebase.config';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(asyncActions.restaurants.fetchAll());
+
   return (
     <AppRoutes />
   );
